@@ -9,9 +9,9 @@ namespace Podcast.Controllers
 {
   public class TitlesController : Controller
   {
-    private readonly ToDoListContext _db;
+    private readonly PodcastContext _db;
 
-    public TitlesController(ToDoListContext db)
+    public TitlesController(PodcastContext db)
     {
       _db = db;
     }

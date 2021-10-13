@@ -2,13 +2,13 @@
   Layout = "_Layout";
 }
 
-@model Podcast.Models.Podcast
+@model Podcast.Models.Title
 
 <h3>Edit this Podcast: @Html.DisplayFor(model => model.PodcastName)</h3>
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.PodcastId)
+  @Html.HiddenFor(model => model.TitleId)
   <div class="form-group">
     @Html.LabelFor(model => model.PodcastName)
     @Html.EditorFor(model => model.PodcastName,  new { htmlAttributes = new { @class = "form-control", @required = "required" } })

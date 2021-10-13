@@ -15,7 +15,7 @@
 
 @foreach (Title title in Model)
 {
-  <li>@Html.ActionLink($"{title.Name}", "Details", new { id = title.TitleId })</li>
+  <li>@Html.ActionLink($"{title.PodcastName}", "Details", new { id = title.TitleId })</li>
 }
 
 <br>
