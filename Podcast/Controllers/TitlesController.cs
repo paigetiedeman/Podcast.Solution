@@ -28,13 +28,13 @@ namespace Podcast.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Title item, int CategoryId)
+    public ActionResult Create(Title title, int CategoryId)
     {
-      _db.Titles.Add(item);
+      _db.Titles.Add(title);
       _db.SaveChanges();
       if (CategoryId != 0)
       {
-        _db.CategoryTitle.Add(new CategoryTitle() { CategoryId = CategoryId, TitleId = item.TitleId });
+        _db.CategoryTitle.Add(new CategoryTitle() { CategoryId = CategoryId, TitleId = title.TitleId });
       }
       _db.SaveChanges();
       return RedirectToAction("Index");
@@ -43,44 +43,44 @@ namespace Podcast.Controllers
     public ActionResult Details(int id)
     {
       var thisTitle = _db.Titles
-          .Include(item => item.JoinEntities)
+          .Include(title => title.JoinEntities)
           .ThenInclude(join => join.Category)
-          .FirstOrDefault(item => item.TitleId == id);
+          .FirstOrDefault(title => title.TitleId == id);
       return View(thisTitle);
     }
 
     public ActionResult Edit(int id)
     {
-      var thisTitle = _db.Titles.FirstOrDefault(item => item.TitleId == id);
+      var thisTitle = _db.Titles.FirstOrDefault(title => title.TitleId == id);
       ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
       return View(thisTitle);
     }
 
     [HttpPost]
-    public ActionResult Edit(Title item, int CategoryId)
+    public ActionResult Edit(Title title, int CategoryId)
     {
       if (CategoryId != 0)
       {
-        _db.CategoryTitle.Add(new CategoryTitle() { CategoryId = CategoryId, TitleId = item.TitleId });
+        _db.CategoryTitle.Add(new CategoryTitle() { CategoryId = CategoryId, TitleId = title.TitleId });
       }
-      _db.Entry(item).State = EntityState.Modified;
+      _db.Entry(title).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult AddCategory(int id)
     {
-      var thisTitle = _db.Titles.FirstOrDefault(item => item.TitleId == id);
+      var thisTitle = _db.Titles.FirstOrDefault(title => title.TitleId == id);
       ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
       return View(thisTitle);
     }
 
     [HttpPost]
-    public ActionResult AddCategory(Title item, int CategoryId)
+    public ActionResult AddCategory(Title title, int CategoryId)
     {
       if (CategoryId != 0)
       {
-      _db.CategoryTitle.Add(new CategoryTitle() { CategoryId = CategoryId, TitleId = item.TitleId });
+      _db.CategoryTitle.Add(new CategoryTitle() { CategoryId = CategoryId, TitleId = title.TitleId });
       }
       _db.SaveChanges();
       return RedirectToAction("Index");
@@ -88,14 +88,14 @@ namespace Podcast.Controllers
 
     public ActionResult Delete(int id)
     {
-      var thisTitle = _db.Titles.FirstOrDefault(item => item.TitleId == id);
+      var thisTitle = _db.Titles.FirstOrDefault(title => title.TitleId == id);
       return View(thisTitle);
     }
 
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      var thisTitle = _db.Titles.FirstOrDefault(item => item.TitleId == id);
+      var thisTitle = _db.Titles.FirstOrDefault(title => title.TitleId == id);
       _db.Titles.Remove(thisTitle);
       _db.SaveChanges();
       return RedirectToAction("Index");

@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Podcast.Models.Title
+
+<h3>Add a Category to this Podcast: @Html.DisplayFor(model => model.PodcastName)</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.TitleId)
+
+    @Html.Label("Select Category")
+    @Html.DropDownList("CategoryId", null, new { @class = "form-control"})
+
+    <input type="submit" value="Save" class = "btn btn-light"/>
+}
+
+<p class = "btn btn-light">@Html.ActionLink("Back to list", "Index")</p>

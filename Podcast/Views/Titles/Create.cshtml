@@ -2,3 +2,27 @@
   Layout = "_Layout";
 }
 
+@model Podcast.Models.Student
+
+<h3>Add a Podcast and Category</h3>
+<hr>
+
+@using (Html.BeginForm())
+{
+  <div class = "form-group">
+    @Html.LabelFor(model => model.PodcastName)
+    @Html.TextBoxFor(model => model.PodcastName, new {@class = "form-control", @required= "required"})
+    
+    @Html.LabelFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description, new {@class = "form-control", @required= "required"})
+
+    @Html.Label("Select Category")
+    @Html.DropDownList("CategoryId", null, new { @class = "form-control" })
+  </div>
+
+  <input type="submit" value="Add New Podcast" class="btn btn-light"/>
+
+}
+
+<br>
+<p class="btn btn-light">@Html.ActionLink("Show All Students", "Index")</p>

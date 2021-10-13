@@ -1,3 +1,36 @@
 @{
   Layout = "_Layout";
 }
+
+@model Podcast.Models.Title
+
+<h3>Podcast Details</h3>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.PodcastName): @Html.DisplayFor(model => model.PodcastName)</h3>
+
+@if (@Model.JoinEntities.Count == 0)
+{
+  <p>This podcast does not belong to any cstegories</p>
+}
+else
+{
+  <h4>Categories the Podcast belongs to:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Category.Name</li>
+    
+    @using (Html.BeginForm("DeleteCategory", "Titles"))
+    {
+      @Html.Hidden("joinId", @join.CategoryTitleId)
+      <input type="submit" value="Delete" class="btn btn-dark"/>
+    }
+  }
+  </ul>
+}
+
+<p class="btn btn-dark">@Html.ActionLink("Add a Category", "AddCourse", new { id = Model.PodcastId })</p>
+
+<p class="btn btn-dark">@Html.ActionLink("Back to List", "Index")</p>
+<p class="btn btn-dark">@Html.ActionLink("Edit Podcast", "Edit", new { id = Model.PodcastId })</p>
+<p class="btn btn-dark">@Html.ActionLink("Delete Podcast", "Delete", new { id = Model.PodcastId })</p>

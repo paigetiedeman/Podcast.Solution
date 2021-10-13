@@ -1,3 +1,14 @@
 @{
   Layout = "_Layout";
 }
+
+@model Podcast.Models.Title
+
+<h2>Are you sure you want to delete this?</h2>
+
+@Html.DisplayNameFor(model => model.PodcastName): @Html.DisplayFor(model => model.PodcastName)
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete" class="btn btn-dark"/>
+}
+<p class="btn btn-dark">@Html.ActionLink("Back to List", "Index")</p>

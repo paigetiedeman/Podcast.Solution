@@ -1,3 +1,23 @@
 @{
   Layout = "_Layout";
 }
+
+@using Podcast.Models;
+@model List<Podcast.Models.Title>;
+
+<h1>Podcasts:</h1>
+<hr>
+
+@if (@Model.Count == 0)
+{
+  <h3>No podcasts have been added yet!</h3>
+} 
+
+@foreach (Title title in Model)
+{
+  <li>@Html.ActionLink($"{title.Name}", "Details", new { id = title.TitleId })</li>
+}
+
+<br>
+<p class="btn btn-dark">@Html.ActionLink("Add New Podcast", "Create")</p>
+<p class="btn btn-dark">@Html.ActionLink("Add A Category", "AddCategory")</p>

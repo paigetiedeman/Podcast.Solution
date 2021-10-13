@@ -1,3 +1,28 @@
 @{
   Layout = "_Layout";
 }
+
+@model Podcast.Models.Category
+
+<h3>Category Details</h3>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>This category does not contain any titles</p>
+}
+else
+{
+  <h4>Titles in this Category are:</h4>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Title.PodcastName</li>
+  }
+  </ul>
+}
+
+<p class="btn btn-dark">@Html.ActionLink("Back to Categories", "Index")</p>
+<p class="btn btn-dark">@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId })</p>
+<p class="btn btn-dark">@Html.ActionLink("Delete Category", "Delete", new { id = Model.CategoryId })</p>
