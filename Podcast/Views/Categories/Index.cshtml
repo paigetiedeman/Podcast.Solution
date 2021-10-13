@@ -9,15 +9,23 @@
 
 @if (@Model.Count == 0)
 {
-  <h3>No courses have been added yet!</h3>
+  <h3>No categories have been added yet!</h3>
 } 
 
-<ul>
+
   @foreach(Category category in Model)
   {
-    <li>@Html.ActionLink($"{category.Name}", "Details", new { id = category.CategoryId })</li>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card text-center bg-light mb-3" style="width: 24rem;">
+          <div class ="card-body">
+            <h5 class="card-title">@Html.ActionLink($"{category.Name}", "Details", new { id = category.CategoryId, @style = "color:white;" })</h5>
+          </div>
+        </div>
+      </div>
+    </div>
   }
-</ul>
 
+<br>
 <p class="btn btn-dark">@Html.ActionLink("Add New Category", "Create")</p>
 <p class="btn btn-dark">@Html.ActionLink("Return Home", "Index", "Home")</p>
