@@ -5,9 +5,9 @@
 [![Language][languageC-shield]][languageC-url]
 [![MIT License][license-shield]][license-url]
 
-# Project Name
+# Podcasts!!
 
-#### This is a C# web application ...
+#### This is a C# web application that gives suggestions on Podcasts based on Categories!
 
 <br>
 
