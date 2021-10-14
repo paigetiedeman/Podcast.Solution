@@ -1,19 +1,24 @@
 .text {
-  color: #e6c8a0;
+  color: #944d50;
 }
 
 a.text:hover{
-  color: #F6BA96;
+  color: #F49899;
 }
 
+h5 {
+  font-weight: bold;
+  text-shadow: 1px 1px #74747493;
+}
 
-h2, h3, h5 {
+h2, h3, h4 {
   text-shadow: 1px 1px #F49899;
   color: #944d50;
 }
 
 h2, h3 {
   font-size: 48px;
+  font-weight: bolder;
 }
 
 body {
@@ -21,7 +26,11 @@ body {
   background: radial-gradient(#ebe0c8, #f6bb96e1 );
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  color: #73BEDA;
+  color: white;
+}
+
+.card {
+  background-color: #B8D0DA;
 }
 
 .btn {
@@ -29,13 +38,24 @@ body {
   color: #e6c8a0;
 }
 
+.btn:hover {
+  color: #F6BA96;
+}
+
 .form-control2 {
   width: 500px;
   margin: auto;
   border-radius: 5px;
-  border-color: #ebe0c8;
+  border-color: #f0e7d5;
 }
 
+.delete {
+  background-color: #B8D0DA;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: #f0e7d5;
+  font-size: 28px;;
+}
 
 .halo {
   bottom: 0;
@@ -51,7 +71,7 @@ body {
   display: block;
   font-family: 'Satisfy', cursive;
   font-size: 32px;
-  text-shadow: 1px 1px black;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.726);
   transform: rotate(-10deg);
 }
 
@@ -80,7 +100,7 @@ body {
 
 .vintage {
   font-family: 'Six Caps', sans-serif;
-  font-size: 192px;
+  font-size: 200px;
   letter-spacing: 14px;
   line-height: 1;
   margin: 0;

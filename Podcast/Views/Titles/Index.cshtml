@@ -16,7 +16,7 @@
 @foreach (Title title in Model)
 {
   <div class="card-deck">
-    <div class="card text-center bg-light border-dark mb-3" style="width: 24rem;">
+    <div class="card text-center mb-3" style="width: 24rem;">
       <div class ="card-body">
         <h5 class="card-title">@Html.ActionLink($"{title.PodcastName}", "Details", new { id = title.TitleId }, new { @class = "text" })</h5>
         <p class ="card-text">@title.Description</p>

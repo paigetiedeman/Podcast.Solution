@@ -5,17 +5,15 @@
 [![Language][languageC-shield]][languageC-url]
 [![MIT License][license-shield]][license-url]
 
-# Podcasts!!
+  <img src="Podcast/wwwroot/img/podify.png">
 
-#### This is a C# web application that gives suggestions on Podcasts based on Categories!
+#### This is a C# web application that stores Podcasts based on Categories!
 
 <br>
 
 #### _By Paige Tiedeman_
 
 <br>
-
-  <!-- <img src="ProjectName/wwwroot/img/RelationshipTable.png"> -->
  
 </div>
 
@@ -35,7 +33,7 @@
 
 ## Description
 
-This web application ...
+This web application lets the user add podcasts and categories, the user can connect podcasts to categories. 
 
 ## Installation Requirements
 
@@ -43,11 +41,11 @@ This web application ...
 * _Navigate into the top level directory_
 * _Open in your code editor_
 * _Commit and push your .gitignore file to your repo_
-* _Add the file ProjectName/ProjectName/appsettings.json and insert the following:_
+* _Add the file Podcast.Solution/Podcast/appsettings.json and insert the following:_
 ```
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=university;uid=[YOUR-UID];pwd=[YOUR-PASSWORD-HERE];"
+    "DefaultConnection": "Server=localhost;Port=3306;database=podcast;uid=[YOUR-UID];pwd=[YOUR-PASSWORD-HERE];"
   }
 }
 ```
@@ -58,18 +56,26 @@ This web application ...
 
 
 ## Steps To Use
-* _In your terminal navigate into ProjectName.Solution/ProjectName_
+* _In your terminal navigate into Podcast.Solution/Podcast_
 * _If Migrations folder is not present run `$ dotnet ef migrations add Initial` to add Migrations folder_
 * _Then run `$ dotnet ef database update` to create the schema_
 * _Run `$ dotnet build` to build the site_
 * _Run `$ dotnet run` to start the live server_
-* _Click either button to see all ..._
+* _Click either button to see all podcasts or categories_
 * _After clicking add  put in your inputs and hit submit to reveal the lists!_
+* _There is also a search button to search by PodcastName_
 
 ## User Stories
 
 <details>
-<summary> As A ..</summary>
+<summary> As A User..</summary>
+
+* I can add a category of podcasts.
+* I can add a podcast and description to a category.
+* I can add more than one category to a podcast.
+* I can search by podcast names to view details.
+* I can see the list of podcasts under a category.
+* I can edit and delete either categories or podcasts.
 
 </details>
 

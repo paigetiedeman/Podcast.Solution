@@ -10,14 +10,15 @@
 {
   @Html.HiddenFor(model => model.TitleId)
   <div class="form-group">
-    @Html.LabelFor(model => model.PodcastName)
+    <h4>Podcast Name:</h4>
     @Html.EditorFor(model => model.PodcastName,  new { htmlAttributes = new { @class = "form-control", @required = "required" } })
 
-    @Html.Label("Select Category")
+    <h4>@Html.Label("Select Category")</h4>
     @Html.DropDownList("CategoryId", null, new { @class = "form-control" })
 
+    <br>
     <input type="submit" value="Save" class="btn btn-light"/>
   </div>
 }
 
-<p class="btn btn-light">@Html.ActionLink("Back to List", "Index")</p>
+<p class="btn btn-light">@Html.ActionLink("Back to List", "Index", null, null, new {@style = "color:#e6c8a0"})</p>

@@ -18,25 +18,28 @@ else
 {
   <h4>Categories this Podcast belongs to:</h4>
 
+<br>
   @foreach(var join in Model.JoinEntities)
   {
-    <div class="card text-center bg-light border-light mb-3" style="width: 24rem;">
-      <div class="card-body">
+    <div class="card-deck">
+      <div class="card text-center border-light mb-3" style="width: 24rem;">
+        <div class="card-body">
 
-      <h5 class="card-title">@join.Category.Name</h5>
+        <h5 class="card-title">@join.Category.Name</h5>
 
-      @using (Html.BeginForm("DeleteCategory", "Titles"))
-      {
-        @Html.Hidden("joinId", @join.CategoryTitleId)
-        <input type="submit" value="Delete" class="btn btn-light"/>
-      }
+        @using (Html.BeginForm("DeleteCategory", "Titles"))
+        {
+          @Html.Hidden("joinId", @join.CategoryTitleId)
+          <input type="submit" value="Delete" class="btn btn-light"/>
+        }
+        </div>
       </div>
     </div>
   }
 }
 
-<p class="btn btn-light">@Html.ActionLink("Add a Category", "AddCategory", new { id = Model.TitleId })</p>
+<p class="btn btn-light">@Html.ActionLink("Add a Category", "AddCategory", new { id = Model.TitleId }, new {@style = "color:#e6c8a0"})</p>
 
-<p class="btn btn-light">@Html.ActionLink("Back to List", "Index")</p>
-<p class="btn btn-light">@Html.ActionLink("Edit Podcast", "Edit", new { id = Model.TitleId })</p>
-<p class="btn btn-light">@Html.ActionLink("Delete Podcast", "Delete", new { id = Model.TitleId })</p>
+<p class="btn btn-light">@Html.ActionLink("Back to List", "Index", null, null, new {@style = "color:#e6c8a0"})</p>
+<p class="btn btn-light">@Html.ActionLink("Edit Podcast", "Edit", new { id = Model.TitleId }, new {@style = "color:#e6c8a0"})</p>
+<p class="btn btn-light">@Html.ActionLink("Delete Podcast", "Delete", new { id = Model.TitleId }, new {@style = "color:#e6c8a0"})</p>

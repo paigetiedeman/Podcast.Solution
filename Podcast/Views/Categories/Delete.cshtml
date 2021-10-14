@@ -6,10 +6,13 @@
 
 <h4>Are you sure you want to delete this category?</h4>
 
-@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+<br>
+<p class="delete">@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
 
 @using (Html.BeginForm())
 {
+  <br>
   <input type="submit" value="Delete" class="btn btn-light"/>
 }
-<p class="btn btn-light">@Html.ActionLink("Back to Categories", "Index")</p>
+<br>
+<p class="btn btn-light">@Html.ActionLink("Back to Categories", "Index", null, null, new { @style = "color:#e6c8a0"})</p>
