@@ -5,18 +5,19 @@
 @model Podcast.Models.Title
 
 <h3>Add a Category to this Podcast: @Html.DisplayFor(model => model.PodcastName)</h3>
+<hr>
 
 @using (Html.BeginForm())
 {
   <div class="form-group">
     @Html.HiddenFor(model => model.TitleId)
 
-    @Html.Label("Select Category")
+    <h5>@Html.Label("Select Category")</h5>
     @Html.DropDownList("CategoryId", null, new { @class = "form-control"})
     <br>
     <input type="submit" value="Save" class = "btn btn-dark"/>
   </div>
 }
 
-<p class = "btn btn-dark">@Html.ActionLink("Back to list", "Index")</p>
-<p class = "btn btn-dark">@Html.ActionLink("Add a New Category", "Create", "Categories", "Create")</p>
+<p class = "btn btn-light ">@Html.ActionLink("Back to list", "Index", null, null, new {@style = "color:#e6c8a0"})</p>
+<p class = "btn btn-light">@Html.ActionLink("Add a New Category", "Create", "Categories", "Create", new {@style = "color:#e6c8a0"})</p>

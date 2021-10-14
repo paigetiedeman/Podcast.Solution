@@ -10,7 +10,7 @@
 
 @if (@Model.Count == 0)
 {
-  <h3>No podcasts have been added yet!</h3>
+  <h4>No podcast by that name has been found!</h4>
 } 
 
 @foreach (Title title in Model)
@@ -26,7 +26,7 @@
 }
 
 <br>
-<p class ="btn btn-light">@Html.ActionLink("Search for a Podcast", "Search")</p>
-<p class="btn btn-light">@Html.ActionLink("Add New Podcast", "Create")</p>
-<p class="btn btn-light">@Html.ActionLink("Add A Category", "AddCategory")</p>
-<p class="btn btn-light">@Html.ActionLink("Return Home", "Index", "Home")</p>
+<p class ="btn btn-light">@Html.ActionLink("Search for a Podcast", "Search", null, null, new {@style = "color:#e6c8a0"})</p>
+<p class="btn btn-light">@Html.ActionLink("Add New Podcast", "Create", null, null, new {@style = "color:#e6c8a0"})</p>
+<p class="btn btn-light">@Html.ActionLink("Add A Category", "AddCategory", null, null, new {@style = "color:#e6c8a0"})</p>
+<p class="btn btn-light">@Html.ActionLink("Return Home", "Index", "Home", null, new {@style = "color:#e6c8a0"})</p>

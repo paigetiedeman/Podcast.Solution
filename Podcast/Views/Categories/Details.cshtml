@@ -18,11 +18,11 @@ else
   <ul>
   @foreach(var join in Model.JoinEntities)
   {
-    <li>@join.Title.PodcastName</li>
+    <h5>@join.Title.PodcastName</h5>
   }
   </ul>
 }
 
-<p class="btn btn-dark">@Html.ActionLink("Back to Categories", "Index")</p>
-<p class="btn btn-dark">@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId })</p>
-<p class="btn btn-dark">@Html.ActionLink("Delete Category", "Delete", new { id = Model.CategoryId })</p>
+<p class="btn btn-light">@Html.ActionLink("Back to Categories", "Index", null, null, new { @style = "color:#e6c8a0"})</p>
+<p class="btn btn-light">@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId }, new { @style = "color:#e6c8a0"})</p>
+<p class="btn btn-light">@Html.ActionLink("Delete Category", "Delete", new { id = Model.CategoryId }, new { @style = "color:#e6c8a0"})</p>

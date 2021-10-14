@@ -16,7 +16,7 @@
   @foreach(Category category in Model)
   {
     <div class="card-deck">
-        <div class="card text-center bg-light border-dark mb-3" style="width: 24rem;">
+        <div class="card text-center bg-light border-light mb-3" style="width: 24rem;">
           <div class ="card-body">
             <h5 class="card-title">@Html.ActionLink($"{category.Name}", "Details", new { id = category.CategoryId}, new { @class = "text" })</h5>
           </div>
@@ -25,5 +25,5 @@
   }
 
 <br>
-<p class="btn btn-dark">@Html.ActionLink("Add New Category", "Create")</p>
-<p class="btn btn-dark">@Html.ActionLink("Return Home", "Index", "Home")</p>
+<p class="btn btn-light">@Html.ActionLink("Add New Category", "Create", null, null, new { @style = "color:#e6c8a0"})</p>
+<p class="btn btn-light">@Html.ActionLink("Return Home", "Index", "Home", null, new { @style = "color:#e6c8a0"})</p>

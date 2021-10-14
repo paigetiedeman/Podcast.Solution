@@ -1,5 +1,5 @@
 .text {
-  color: #F6BA96;
+  color: #e6c8a0;
 }
 
 a.text:hover{
@@ -8,11 +8,12 @@ a.text:hover{
 
 
 h2, h3, h5 {
-  text-shadow: 1px 1px #5b8fa1;
+  text-shadow: 1px 1px #F49899;
+  color: #944d50;
 }
 
-h2 {
-  font-size: 44px;
+h2, h3 {
+  font-size: 48px;
 }
 
 body {
@@ -20,16 +21,23 @@ body {
   background: radial-gradient(#ebe0c8, #f6bb96e1 );
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  color: #73BEDA !important;
+  color: #73BEDA;
 }
 
 .btn {
   background-color: #944d50;
-  color: #F6BA96;
+  color: #e6c8a0;
 }
 
+.form-control2 {
+  width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  border-color: #ebe0c8;
+}
+
+
 .halo {
-  /* background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.6)); */
   bottom: 0;
   left: 0;
   position: fixed;

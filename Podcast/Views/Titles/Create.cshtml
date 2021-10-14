@@ -10,13 +10,13 @@
 @using (Html.BeginForm())
 {
   <div class = "form-group">
-    <p>Podcast Title</p>
+    <h5>Podcast Title</h5>
     @Html.TextBoxFor(model => model.PodcastName, new {@class = "form-control", @required= "required"})
     <br>
-    @Html.LabelFor(model => model.Description)
+    <h5>@Html.LabelFor(model => model.Description)</h5>
     @Html.TextBoxFor(model => model.Description, new {@class = "form-control", @required= "required"})
     <br>
-    @Html.Label("Select Category")
+    <h5>@Html.Label("Select Category")</h5>
     @Html.DropDownList("CategoryId", null, new { @class = "form-control" })
   </div>
   <br>
@@ -25,4 +25,4 @@
 }
 
 <br>
-<p class="btn btn-light">@Html.ActionLink("Show All Podcasts", "Index")</p>
+<p class="btn btn-light">@Html.ActionLink("Show All Podcasts", "Index", null, null, new {@style = "color:#e6c8a0"})</p>
