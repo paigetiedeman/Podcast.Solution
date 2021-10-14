@@ -5,7 +5,7 @@
 @using Podcast.Models;
 @model List<Podcast.Models.Title>;
 
-<h1>Podcasts:</h1>
+<h2>Podcasts:</h2>
 <hr>
 
 @if (@Model.Count == 0)
@@ -15,9 +15,18 @@
 
 @foreach (Title title in Model)
 {
-  <li>@Html.ActionLink($"{title.PodcastName}", "Details", new { id = title.TitleId })</li>
+  <div class="card-deck">
+    <div class="card text-center bg-light border-dark mb-3" style="width: 24rem;">
+      <div class ="card-body">
+        <h5 class="card-title">@Html.ActionLink($"{title.PodcastName}", "Details", new { id = title.TitleId }, new { @class = "text" })</h5>
+        <p class ="card-text">@title.Description</p>
+      </div>
+    </div>
+  </div>
 }
 
 <br>
-<p class="btn btn-dark">@Html.ActionLink("Add New Podcast", "Create")</p>
-<p class="btn btn-dark">@Html.ActionLink("Add A Category", "AddCategory")</p>
+<p class ="btn btn-light">@Html.ActionLink("Search for a Podcast", "Search")</p>
+<p class="btn btn-light">@Html.ActionLink("Add New Podcast", "Create")</p>
+<p class="btn btn-light">@Html.ActionLink("Add A Category", "AddCategory")</p>
+<p class="btn btn-light">@Html.ActionLink("Return Home", "Index", "Home")</p>

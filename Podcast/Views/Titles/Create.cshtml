@@ -10,16 +10,16 @@
 @using (Html.BeginForm())
 {
   <div class = "form-group">
-    @Html.LabelFor(model => model.PodcastName)
+    <p>Podcast Title</p>
     @Html.TextBoxFor(model => model.PodcastName, new {@class = "form-control", @required= "required"})
-    
+    <br>
     @Html.LabelFor(model => model.Description)
     @Html.TextBoxFor(model => model.Description, new {@class = "form-control", @required= "required"})
-
+    <br>
     @Html.Label("Select Category")
     @Html.DropDownList("CategoryId", null, new { @class = "form-control" })
   </div>
-
+  <br>
   <input type="submit" value="Add New Podcast" class="btn btn-light"/>
 
 }

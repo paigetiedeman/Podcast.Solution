@@ -109,5 +109,18 @@ namespace Podcast.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult Search() 
+    {
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Search(string PodcastName) 
+    {
+      string searchName = PodcastName.ToLower();
+      List<Title> searchResults = _db.Titles.Where(title => title.PodcastName.ToLower().Contains(searchName)).ToList();
+      return View("Index", searchResults);
+    }
   }
 }

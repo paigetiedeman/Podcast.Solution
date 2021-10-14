@@ -1,0 +1,121 @@
+.text {
+  color: #F6BA96;
+}
+
+a.text:hover{
+  color: #F6BA96;
+}
+
+
+h2, h3, h5 {
+  text-shadow: 1px 1px #5b8fa1;
+}
+
+h2 {
+  font-size: 44px;
+}
+
+body {
+  margin: 15px;
+  background: radial-gradient(#ebe0c8, #f6bb96e1 );
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #73BEDA !important;
+}
+
+.btn {
+  background-color: #944d50;
+  color: #F6BA96;
+}
+
+.halo {
+  /* background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.6)); */
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.intro {
+  color: #73BEDA;
+  display: block;
+  font-family: 'Satisfy', cursive;
+  font-size: 32px;
+  text-shadow: 1px 1px black;
+  transform: rotate(-10deg);
+}
+
+.intro--the {
+  transform: rotate(-10deg) translate(-20px, 15px);
+}
+
+.intro--num {
+  background: #EED39A;
+  border: 1px dotted rgb(20, 60, 80);
+  color: #436f80;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  padding: 4px 6px 2px;
+  position: absolute;
+  text-shadow: none;
+  transform: rotate(-10deg) translate(20px, -25px);
+}
+
+.vintage__container {
+  display: inline-block;
+  margin: 25px auto 40px;
+}
+
+.vintage {
+  font-family: 'Six Caps', sans-serif;
+  font-size: 192px;
+  letter-spacing: 14px;
+  line-height: 1;
+  margin: 0;
+  position: relative;
+}
+
+.vintage__top {
+  background: linear-gradient(#e5faf6, #9edcf3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  z-index: 1;
+  -webkit-text-fill-color: transparent;
+}
+
+.vintage__bot {
+  text-shadow: 
+    2px 1px #944d50,
+    4px 2px rgb(185, 100, 103),
+    6px 4px rgb(205, 110, 113),
+    8px 5px rgb(215, 120, 123),
+    10px 6px rgb(225, 130, 133),
+    12px 7px rgb(235, 140, 143),
+    14px 8px rgb(245, 150, 153),
+    16px 9px rgb(255, 160, 163),
+    18px 10px rgb(105, 64, 66, 0.411),
+    20px 11px rgba(87, 53, 54, 0.473),
+    22px 12px rgba(65, 39, 40, 0.466),
+    24px 13px rgba(46, 27, 28, 0.507),
+    28px 14px rgba(0, 0, 0, 0.589),
+    30px 15px rgba(0, 0, 0, 0.5),
+    32px 16px rgba(0, 0, 0, 0.384),
+    34px 17px rgba(0, 0, 0, 0.233),
+    36px 18px rgba(0, 0, 0, 0.164),
+    40px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* #F49899
+#F6BA96
+#EED39A
+#E9DFD6
+#B8D0DA
+#73BEDA */
+
+/* background: linear-gradient(#f8dda2ed, #eee5dc); */

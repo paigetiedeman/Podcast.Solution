@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Podcast.Models.Title;
+
+
+<h2>Search A Podcast Name: </h2>
+<hr>
+<br>
+
+@using (Html.BeginForm())
+{
+
+  @Html.TextBoxFor(model => model.PodcastName, new {@class = "form-control", @required= "required"})
+  <br>
+  <input type="submit" value="Search" class="btn btn-light"/>
+}
+
+
+<br>
+<p class="btn btn-light">@Html.ActionLink("Back", "Index")</p>

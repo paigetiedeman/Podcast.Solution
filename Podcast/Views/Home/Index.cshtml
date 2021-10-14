@@ -2,9 +2,20 @@
   Layout = "_Layout";
 }
 
-<div class="jumbotron jumbotron-fluid">
-  <h1>Welcome to Yfitpos</h1>
+<div class="halo"></div>
+<div>
+  <span class="intro intro--the">The</span>
+  <span class="intro intro--num">personal</span>
+  <span class="intro">podcast database</span>
+</div>
+<div class="vintage__container">
+  <p class="vintage vintage__top">PODIFY</p>
+  <p class="vintage vintage__bot">PODIFY</p>
+</div>
+<div>
 </div>
 
-<p class="btn btn-dark">@Html.ActionLink("See All Podcasts", "Index", "Titles")</p>
-<p class="btn btn-dark">@Html.ActionLink("See All Categories", "Index", "Categories")</p>
+
+<p class="btn btn-outline-light btn-lg btn-block">@Html.ActionLink("See All Podcasts", "Index", "Titles", null, new {@style = "color:#e6c8a0"})</p>
+<p class="btn btn-outline-light btn-lg btn-block">@Html.ActionLink("See All Categories", "Index", "Categories", null, new {@style = "color:#e6c8a0"})</p>
+<p class="btn btn-outline-light btn-lg btn-block">@Html.ActionLink("Search for a Podcast", "Search", "Titles", null, new {@style = "color:#e6c8a0"})</p>
