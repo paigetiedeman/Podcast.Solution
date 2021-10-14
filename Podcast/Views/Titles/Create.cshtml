@@ -16,9 +16,21 @@
     <h5>@Html.LabelFor(model => model.Description)</h5>
     @Html.TextBoxFor(model => model.Description, new {@class = "form-control", @required= "required"})
     <br>
+    <h5>@Html.Label("Select Rating")</h5>
+    @Html.DropDownList("Rating", new List<SelectListItem> {
+      new SelectListItem { Text= "⭐", Value = "⭐" },
+      new SelectListItem { Text= "⭐⭐", Value = "⭐⭐" },
+      new SelectListItem { Text= "⭐⭐⭐", Value = "⭐⭐⭐" },
+      new SelectListItem { Text= "⭐⭐⭐⭐", Value = "⭐⭐⭐⭐" },
+      new SelectListItem { Text= "⭐⭐⭐⭐⭐", Value = "⭐⭐⭐⭐⭐" }
+    }, new { @class = "custom-select" })
+    <br>
+    <br>
     <h5>@Html.Label("Select Category")</h5>
     @Html.DropDownList("CategoryId", null, new { @class = "form-control" })
   </div>
+
+
   <br>
   <input type="submit" value="Add New Podcast" class="btn btn-light"/>
 

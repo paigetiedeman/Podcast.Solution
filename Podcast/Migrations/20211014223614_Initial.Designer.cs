@@ -8,7 +8,7 @@ using Podcast.Models;
 namespace Podcast.Migrations
 {
     [DbContext(typeof(PodcastContext))]
-    [Migration("20211013214926_Initial")]
+    [Migration("20211014223614_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,6 +63,9 @@ namespace Podcast.Migrations
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("PodcastName")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Rating")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("TitleId");

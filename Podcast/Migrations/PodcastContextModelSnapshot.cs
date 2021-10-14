@@ -63,6 +63,9 @@ namespace Podcast.Migrations
                     b.Property<string>("PodcastName")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
+                    b.Property<string>("Rating")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
                     b.HasKey("TitleId");
 
                     b.ToTable("Titles");

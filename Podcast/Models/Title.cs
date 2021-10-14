@@ -12,6 +12,7 @@ namespace Podcast.Models
     public int TitleId { get; set; }
     public string PodcastName { get; set; }
     public string Description { get; set; }
+    public string Rating { get; set; }
     public virtual ICollection<CategoryTitle> JoinEntities { get; set; }
   }
 }

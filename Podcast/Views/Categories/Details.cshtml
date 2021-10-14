@@ -6,7 +6,7 @@
 
 <h3>Category Details</h3>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
 
 @if(@Model.JoinEntities.Count == 0)
 {
@@ -26,3 +26,4 @@ else
 <p class="btn btn-light">@Html.ActionLink("Back to Categories", "Index", null, null, new { @style = "color:#e6c8a0"})</p>
 <p class="btn btn-light">@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId }, new { @style = "color:#e6c8a0"})</p>
 <p class="btn btn-light">@Html.ActionLink("Delete Category", "Delete", new { id = Model.CategoryId }, new { @style = "color:#e6c8a0"})</p>
+<p class="btn btn-light">@Html.ActionLink("Back to Podcasts", "Index", "Titles", null, new {@style = "color:#e6c8a0"})</p>

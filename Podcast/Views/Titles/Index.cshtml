@@ -20,6 +20,9 @@
       <div class ="card-body">
         <h5 class="card-title">@Html.ActionLink($"{title.PodcastName}", "Details", new { id = title.TitleId }, new { @class = "text" })</h5>
         <p class ="card-text">@title.Description</p>
+          <div class="card-footer text-muted">
+            Your Rating: @title.Rating
+          </div>
       </div>
     </div>
   </div>
